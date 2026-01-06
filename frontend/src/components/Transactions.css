@@ -1,0 +1,287 @@
+.transactions-page {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.filter-btn.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+
+.transactions-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 20px;
+}
+
+.transactions-list {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th {
+  text-align: left;
+  padding: 12px;
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.transactions-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.transactions-table tr {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.transactions-table tr:hover {
+  background: #f9fafb;
+}
+
+.transactions-table tr.selected {
+  background: #eff6ff;
+  border-left: 3px solid #3b82f6;
+}
+
+.txn-id {
+  font-family: monospace;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.amount {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.transaction-details {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.transaction-details h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.detail-section {
+  margin-bottom: 30px;
+}
+
+.detail-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-item label {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.detail-item p {
+  font-size: 14px;
+  color: #374151;
+  word-break: break-all;
+}
+
+.amount-large {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.prediction-card {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 4px solid #3b82f6;
+}
+
+.prediction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.fraud-badge {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.fraud-badge.fraud {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.fraud-badge.safe {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.probability {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.prediction-details {
+  margin-bottom: 20px;
+}
+
+.prediction-details p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.explainability-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.explainability-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.feature-contributions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+}
+
+.feature-name {
+  font-size: 12px;
+  color: #6b7280;
+  font-family: monospace;
+}
+
+.feature-impact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.impact {
+  font-size: 16px;
+}
+
+.impact.increases {
+  color: #dc2626;
+}
+
+.impact.decreases {
+  color: #16a34a;
+}
+
+@media (max-width: 1200px) {
+  .transactions-container {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-details {
+    position: relative;
+    max-height: none;
+  }
+}
+
