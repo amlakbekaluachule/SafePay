@@ -19,58 +19,6 @@ A production-grade, auditable, and explainable fraud detection system with real-
 - Production-ready with Docker deployment
 - Feature store for efficient inference
 
-## Quick Start
-
-### Prerequisites
-- Docker and Docker Compose
-- Python 3.9+ (for local development)
-- Node.js 18+ (for frontend development)
-
-### Using Docker Compose
-
-```bash
-docker-compose up --build
-```
-
-This will start:
-- ML API on `http://localhost:8000`
-- Dashboard on `http://localhost:3000`
-- PostgreSQL on `localhost:5432`
-
-### Local Development
-
-#### Backend (ML API)
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
-```
-
-#### Frontend (Dashboard)
-```bash
-cd frontend
-npm install
-npm start
-```
-
-#### Database Setup
-```bash
-# Using Docker
-docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres:15
-
-# Run migrations
-cd backend
-alembic upgrade head
-```
-
-## API Documentation
-
-Once the API is running, visit:
-- Swagger UI: `http://localhost:8000/docs`
-- ReDoc: `http://localhost:8000/redoc`
-
 ## Project Structure
 
 ```
@@ -94,19 +42,3 @@ safepay/
 ├── docker-compose.yml
 └── README.md
 ```
-
-## Model Training
-
-Train a new fraud detection model:
-
-```bash
-cd backend
-python training/train_model.py
-```
-
-The model will be saved to `backend/models/fraud_detector.pkl` and feature metadata to `backend/models/feature_metadata.json`.
-
-## License
-
-MIT
-
